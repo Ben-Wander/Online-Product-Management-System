@@ -1,0 +1,178 @@
+#floattable{
+	height: 30px;
+	background: black;
+	color: white;
+	padding: 8px 0px 0px 0px;
+}
+
+#logo2{
+	width: 90px;
+	height: 60px;
+}
+
+#logoname{
+	background:lightgrey;
+	text-indent: 10px;
+	font-size: 60px;
+	color: purple;
+	height: 100px;
+	font-family:futura;
+	/*position: relative;*/
+}
+
+#logoname1{
+	text-indent: 10px;
+	font-size: 60px;
+	color: purple;
+	height: 100px;
+	/*padding: 20px 0px 0px 0px;*/
+	font-family:futura;
+}
+#productsearch{
+	text-indent: 20px;
+	font-family: 微软雅黑;
+	font-size: 15px;
+	color: white;
+}
+
+
+
+#front{
+	height: 30px;
+	font-family: 微软雅黑;
+	font-size: 18px;
+	text-align: center;
+	background: lightgrey;
+}
+
+
+#front_td{
+	width: 250px;
+}
+
+
+
+
+#back{
+	background: dimgrey;
+	height: 70px;
+	font-size: 15px;
+	color: white;
+	padding: 10px 20px 10px 20px;
+}
+
+table{
+	width: 100% ;
+	font-family: 微软雅黑;
+	margin: 0px;
+}
+
+#submit{
+	font-family:微软雅黑 ;
+	font-size: 20px;
+	color: black;
+}
+
+body{
+	width: 100%;
+	font-family: 微软雅黑;
+	margin:0px auto;
+	background:lightgoldenrodyellow;
+}
+
+A.a1:link{
+	color: dodgerblue;
+	text-decoration:none; 
+}
+
+A.a1:visited{
+	color: dodgerblue;
+	text-decoration: none;
+}
+
+A.a1:hover{
+	color: dodgerblue;
+	text-decoration: none;
+}
+
+
+
+A.a2:link{
+	color: dodgerblue;
+	text-decoration:none; 
+}
+
+A.a2:visited{
+	color: dodgerblue;
+	text-decoration: none;
+}
+A.a2:hover{
+	color: dodgerblue;
+	text-decoration: none;
+}
+
+
+
+ul{
+	font-size: 25px;
+	font-family: 黑体;
+	text-indent: 30px;
+	list-style:none;
+	line-height: 150%;
+}
+
+#registerform{
+	width: 80%;
+	text-align: left;
+	font-size: 20px;
+	text-indent: 20px;
+	background: lightgreen;
+	border-color: cadetblue;
+	margin: 0 auto;
+}
+
+#login{
+	width: 60%
+	text-align: right;
+	font-size: 20px;
+	margin: 0 auto;
+}
+
+.bt2{
+	float: left;
+	text-indent: 90px;
+	font-size: 20px;
+	padding: 10px 0px 10px 0px;
+}
+
+#inf{
+	text-indent: 110px;
+}
+
+.div_show
+{
+	text-indent: 40px;
+   	display:block;
+}
+.div_hide
+{
+	text-indent: 40px;
+ 	display:none;
+}
+
+#servicetable{
+	font: "微软雅黑";
+	font-size: 20px;
+	width: 90%;
+	margin: 0 auto;
+}
+
+#problem{
+	color: darkblue;
+	font-size: 25px;
+}
+
+.wrap{
+	word-break: break-all;
+	word-wrap: break-word;
+}

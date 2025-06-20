@@ -1,0 +1,81 @@
+version: "3.3"
+
+services:
+    mysql:
+        environment:
+            MYSQL_ROOT_PASSWORD: MyDBRoot123
+            MYSQL_DATABASE: dogeshopping
+            MYSQL_USER: php
+            MYSQL_PASSWORD: php
+        image: mariadb:latest
+        ports:
+            - "3306:3306"
+        volumes:
+            - /project/src/mysql/data:/var/lib/mysql
+        restart: always
+        deploy:
+            placement:
+                constraints:
+                      - node.role == manager
+        networks:
+            - mynet
+
+    myphp:
+        image: myphp:latest
+        ports:
+            - "9000:9000"
+        volumes:
+            - myvolume:/var/www/html
+            - /project/src/php.ini:/usr/local/etc/php/php.ini
+        depends_on:
+            - mysql
+        restart: always
+        deploy:
+            placement:
+                constraints:
+                      - node.role == manager
+        networks:
+            - mynet
+
+    mynginx:
+        image: nginx:latest
+        ports:
+            - "80:80"
+        volumes:
+            - myvolume:/var/www/html
+            - myvolumenginxconf:/etc/nginx/conf.d
+        depends_on:
+            - myphp
+        restart: always
+        networks:
+            - mynet
+
+    phpMyAdmin:
+        image: phpmyadmin:latest
+        environment:
+            PMA_HOST: mysql
+        ports:
+            - "8082:80"
+        depends_on:
+            - mysql
+        restart: always
+        networks:
+            - mynet
+
+networks:
+    mynet:
+        driver: overlay
+        external: true
+
+volumes:
+    myvolume:
+        driver_opts:
+            type: nfs
+            o: addr=10.128.0.25,rw
+            device: :/project/src
+
+    myvolumenginxconf:
+        driver_opts:
+            type: nfs
+            o: addr=10.128.0.25,rw
+            device: :/project/src/nginx
