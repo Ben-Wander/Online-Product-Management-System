@@ -12,7 +12,7 @@ delete, and search), ensuring seamless access from both desktop and mobile devic
 #### [Project](https://github.com/Ben-Wander/Online-Product-Management-System/tree/main/project)
 
 ## Demo
-### Screenshoot demo
+### Screenshot demo
 #### [ipad](https://github.com/Ben-Wander/Online-Product-Management-System/tree/main/ipad) and [iphone](https://github.com/Ben-Wander/Online-Product-Management-System/tree/main/iphone)
 
 ### Video demo
